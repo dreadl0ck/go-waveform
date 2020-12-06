@@ -70,11 +70,11 @@ func outputOriginalWavefromImage(sample waveform.Sample, bound *waveform.Bound, 
 		m := int(math.Ceil(float64(len(sample)) / 100000))
 
 		for i := 0; i < len(sample); i += m {
-			points = append(points, XY{X: float64(i), Y: sample[i]})
+			points = append(points, plotter.XY{X: float64(i), Y: sample[i]})
 		}
 	} else {
 		for i, v := range sample {
-			points = append(points, XY{X: float64(i), Y: v})
+			points = append(points, plotter.XY{X: float64(i), Y: v})
 		}
 	}
 
@@ -191,8 +191,8 @@ func getXYs(x int, s []float64, floor float64) *plotter.XYs {
 	}
 
 	return &plotter.XYs{
-		XY{X: float64(x), Y: min},
-		XY{X: float64(x), Y: max},
+		plotter.XY{X: float64(x), Y: min},
+		plotter.XY{X: float64(x), Y: max},
 	}
 }
 
