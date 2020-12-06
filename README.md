@@ -1,4 +1,5 @@
 # go-waveform
+
 <p align="center">
 	<img src="image.svg" alt="go-waveform">
 </p>
@@ -28,7 +29,7 @@ open example/violin-R.png
 Import as package,
 
 ```go
-import "github.com/cettoana/go-waveform"
+import "github.com/dreadl0ck/go-waveform"
 ```
 
 and decode wav audio file
